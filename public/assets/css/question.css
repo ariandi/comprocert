@@ -1,0 +1,152 @@
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+ #inputGradient:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(left, #ff0000 0%, yellow 35%,yellow 60%,#00f230 100%); /* THIS IS WHAT EVER OVERLAY COLOUR YOU WANT */
+    opacity:0.55;
+  }
+}
+
+	#inputGradient {
+		width:260px;
+		background-color:#00f230;
+		filter:progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#00f230, endColorstr=#ffd900);
+		background-image:-moz-linear-gradient(left, #ff0000 0%, yellow 35%,yellow 60%,#00f230 100%);
+		background-image:linear-gradient(left, #ff0000 0%, yellow 35%,#00f230 100%);
+		background-image:-webkit-linear-gradient(left, #ff0000 0%, #yellow 35%,#00f230 100%);
+		background-image:-o-linear-gradient(left, #ff0000 0%, #yellow 35%,#00f230 100%);
+		background-image:-ms-linear-gradient(left, #ff0000 0%, #yellow 35%,#00f230 100%);
+		background-image:-webkit-gradient(linear, left bottom, right bottom, color-stop(0%,#ff0000),color-stop(35%,yellow), color-stop(63%,yellow),color-stop(100%,#00f230));
+	}
+	
+	input[type=range] {
+	    /*removes default webkit styles*/
+	    -webkit-appearance: none;
+	    
+	    /*fix for FF unable to apply focus style bug */
+	    border: 1px solid white;
+	    
+	    /*required for proper track sizing in FF*/
+	    background: linear-gradient(to right,  #ff0000 0%, yellow 35%, yellow 63%,#00f230 100%);
+			
+	}
+	
+	input[type=range]::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	}
+	
+	input[type=range]:focus {
+	    outline: none;
+	}
+	input[type=range]:focus::-webkit-slider-runnable-track {
+	    background: #ccc;
+	}
+	
+	input[type=range]::-moz-range-track {
+	    height: 5px;
+	    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	    background: transparent;
+	    
+	    /*leave room for the larger thumb to overflow with a transparent border */
+	    border-color: transparent;
+	    border-width: 6px 0;
+	}
+	input[type=range]::-moz-range-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	}
+	
+	/*hide the outline behind the border*/
+	input[type=range]:-moz-focusring{
+	    outline: 1px solid white;
+	    outline-offset: -1px;
+	}
+	
+	input[type=range]::-ms-track {
+	    width: 300px;
+	    height: 5px;
+	    
+	    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	    background: transparent;
+	    
+	    /*leave room for the larger thumb to overflow with a transparent border */
+	    border-color: transparent;
+	    border-width: 6px 0;
+	
+	    /*remove default tick marks*/
+	    color: transparent;
+	}
+	input[type=range]::-ms-fill-lower {
+	    background: #777;
+	    border-radius: 10px;
+	}
+	input[type=range]::-ms-fill-upper {
+	    background: #ddd;
+	    border-radius: 10px;
+	}
+	input[type=range]::-ms-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	}
+	
+	input[type=range]::-ms-track {
+	    width: 300px;
+	    height: 5px;
+	    
+	    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	    background: transparent;
+	    
+	    /*leave room for the larger thumb to overflow with a transparent border */
+	    border-color: transparent;
+	    border-width: 6px 0;
+	
+	    /*remove default tick marks*/
+	    color: transparent;
+	}
+	
+	input[type=range]:focus::-ms-fill-lower {
+	    background: #888;
+	}
+	input[type=range]:focus::-ms-fill-upper {
+	    background: #ccc;
+	}
+	
+	table tr td {
+	    font-size: 17px;
+	}
+
+	table tbody td {
+	   /* width: 50%;*/
+		color:black !important;
+	}
+
+	.progress-bar {
+	    font-size: 20px !important;
+	    padding-top: 6px !important;
+	    text-align:center !important;
+	}
+
+	.progress {
+	    height: 30px !important;
+	}
+
+	.pageinfo{
+		display: inline-block;
+		width: 150px;
+	    padding: 3px;
+	    border: 1px solid black;
+	    text-align: center;
+	}

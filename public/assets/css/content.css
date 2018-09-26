@@ -1,0 +1,13 @@
+.mastheaad{
+  width: 100%;
+  height: 60vh;
+  background: url('/auto/digitaleupdate.jpg') no-repeat;
+  background-size: 100% 100%;
+  margin-top: 80px;
+  }
+.aside-link{
+    display: block;
+      padding: 10px;
+      font-size: larger;
+      font-family: sans-serif;
+  }

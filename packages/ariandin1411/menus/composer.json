@@ -1,0 +1,12 @@
+{
+    "name": "ariandin1411/menus",
+    "description": "For Menu Empatix",
+    "authors": [
+        {
+            "name": "Ariandi Nugraha",
+            "email": "dbduabelas@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,0 +1,167 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateRegistrationsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('registrations', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('ProductID')->nullable();
+            $table->integer('MaxPersons')->nullable();
+            $table->integer('MinPersons')->nullable();
+            $table->text('Description')->nullable();
+            $table->dateTime('RegistrationFromDateTime')->nullable();
+            $table->dateTime('RegistrationToDateTime')->nullable();
+            $table->string('RegistrationPlaceName')->nullable();
+            $table->string('RegistrationPlaceAddress')->nullable();
+            $table->string('RegistrationPlaceZipCode')->nullable();
+            $table->string('RegistrationPlaceCity')->nullable();
+            $table->string('RegistrationPlaceCountry')->nullable();
+            $table->integer('InsertedByPersonID')->nullable();
+            $table->integer('UpdatedByPersonID')->nullable();
+            $table->tinyInteger('Active')->nullable();
+            $table->bigInteger('LecturerPersonID')->nullable();
+            $table->tinyInteger('IsFull')->nullable();
+            $table->string('stylesheet')->nullable();
+            $table->text('SuccessMessage')->nullable();
+            $table->string('Title')->nullable();
+            $table->string('RegistrationNumber')->nullable();
+            $table->dateTime('RegistrationEventStartDateTime')->nullable();
+            $table->tinyInteger('IsGroup')->nullable();
+            $table->tinyInteger('IsExclusive')->nullable();
+            $table->tinyInteger('IsList')->nullable();
+            $table->bigInteger('RegistrationParentID')->nullable();
+            $table->text('ListMessage')->nullable();
+            $table->string('RegistrationRecurringID')->nullable();
+            $table->tinyInteger('IsListAuto')->nullable();
+            $table->string('CodeWord')->nullable();
+            $table->text('SmsWaitingListText')->nullable();
+            $table->text('SmsMovedFromWaitingList')->nullable();
+            $table->text('SmsAutoDeregistered')->nullable();
+            $table->string('EmailMovedFromWaitingList')->nullable();
+            $table->string('EmailAutoDeregistered')->nullable();
+            $table->text('SmsRegistrationFull')->nullable();
+            $table->string('EmailRegistrationFull')->nullable();
+            $table->text('SmsConfirmText')->nullable();
+            $table->text('SmsRegisteredText')->nullable();
+            $table->string('EmailConfirmText')->nullable();
+            $table->text('SmsDeregisteredText')->nullable();
+            $table->tinyInteger('ShowForm')->nullable();
+            $table->tinyInteger('ShowDateTime')->nullable();
+            $table->string('ShortNumber')->nullable();
+            $table->text('ConfirmIndividualText')->nullable();
+            $table->text('AutoDeregisteredIndividualText')->nullable();
+            $table->text('WaitingListIndividualText')->nullable();
+            $table->string('PayType')->nullable();
+            $table->string('RegistrationUrl')->nullable();
+            $table->tinyInteger('IncludeVcal')->nullable();
+            $table->tinyInteger('SendExtraEmail')->nullable();
+            $table->tinyInteger('ShowTitle')->nullable();
+            $table->tinyInteger('ShowDescription')->nullable();
+            $table->tinyInteger('ShowPlace')->nullable();
+            $table->tinyInteger('ShowStatus')->nullable();
+            $table->string('SendEmail')->nullable();
+            $table->string('EmailInviteText')->nullable();
+            $table->text('EmailInviteIndividualText')->nullable();
+            $table->tinyInteger('ActiveWeb')->nullable();
+            $table->text('DeclinedText')->nullable();
+            $table->text('DescriptionInternal')->nullable();
+            $table->string('ConfirmIndividualHeaderText')->nullable();
+            $table->string('AutoDeregisteredIndividualHeaderText')->nullable();
+            $table->string('WaitingListIndividualHeaderText')->nullable();
+            $table->string('EmailInviteIndividualHeaderText')->nullable();
+            $table->string('EmailTest')->nullable();
+            $table->tinyInteger('EnableConfirmStatus')->nullable();
+            $table->tinyInteger('EnableDeregisteredStatus')->nullable();
+            $table->tinyInteger('EnableDeclinedStatus')->nullable();
+            $table->string('LanguageID')->nullable();
+            $table->text('WebSiteHeader')->nullable();
+            $table->bigInteger('WebSiteFooter')->nullable();
+            $table->integer('WebSiteLogoMediaStorageID')->nullable();
+            $table->integer('WebSiteBackgroundMediaStorageID')->nullable();
+            $table->string('FrontPageTitle')->nullable();
+            $table->text('FrontPageDescription')->nullable();
+            $table->tinyInteger('ShowFrontPage')->nullable();
+            $table->tinyInteger('ShowFrontPageDateTime')->nullable();
+            $table->tinyInteger('ShowFrontPagePlace')->nullable();
+            $table->string('ProgramTitle')->nullable();
+            $table->text('ProgramDescription')->nullable();
+            $table->tinyInteger('ShowProgram')->nullable();
+            $table->string('ContactTitle')->nullable();
+            $table->text('ContactDescription')->nullable();
+            $table->tinyInteger('ShowContact')->nullable();
+            $table->string('OptionalTitle')->nullable();
+            $table->text('OptionalDescription')->nullable();
+            $table->tinyInteger('ShowOptional')->nullable();
+            $table->tinyInteger('ShowRegistrationForm')->nullable();
+            $table->string('RegistrationFormTitle')->nullable();
+            $table->string('Password')->nullable();
+            $table->string('ContactEmail')->nullable();
+            $table->string('OptionalTabTitle')->nullable();
+            $table->tinyInteger('ShowFormInFrontend')->nullable();
+            $table->string('ConfirmLinkText')->nullable();
+            $table->string('EmailInviteLinkText')->nullable();
+            $table->string('WaitingListLinkText')->nullable();
+            $table->tinyInteger('IncludeQrCode')->nullable();
+            $table->text('DeregisteredWebText')->nullable();
+            $table->tinyInteger('ShowProduct')->nullable();
+            $table->tinyInteger('ShowPrice')->nullable();
+            $table->string('FrontPageTabTitle')->nullable();
+            $table->string('ProgramTabTitle')->nullable();
+            $table->string('RegistrationFormTabTitle')->nullable();
+            $table->string('ContactTabTitle')->nullable();
+            $table->string('InvoiceComment')->nullable();
+            $table->datetime('RegistrationDeadline')->nullable();
+            $table->tinyInteger('IncludeConfirmUserLink')->nullable();
+            $table->tinyInteger('AllowCourseCoordinator')->nullable();
+            $table->string('CourseCoordinatorConfirmTemplate')->nullable();
+            $table->text('CourseCoordinatorConfirmText')->nullable();
+            $table->string('CourseCoordinatorIndividualHeaderText')->nullable();
+            $table->string('CourseCoordinatorConfirmLinkText')->nullable();
+            $table->string('CertificateTemplate')->nullable();
+            $table->text('CertificateText')->nullable();
+            $table->integer('CertificateLogoMediaStorageID')->nullable();
+            $table->integer('CertificateImageMediaStorageID')->nullable();
+            $table->tinyInteger('CreateNewUserOnPaid')->nullable();
+            $table->integer('RegistrationImageMediaStorageID')->nullable();
+            $table->string('Template')->nullable();
+            $table->bigInteger('InvoiceCompanyID')->nullable();
+            $table->string('UrlAlias')->nullable();
+            $table->integer('FrontImageMediaStorageID')->nullable();
+            $table->integer('ProgramImageMediaStorageID')->nullable();
+            $table->integer('ContactImageMediaStorageID')->nullable();
+            $table->integer('OptionalImageMediaStorageID')->nullable();
+            $table->tinyInteger('ShowParticipant')->nullable();
+            $table->string('ParticipantTitle')->nullable();
+            $table->string('ParticipantTabTitle')->nullable();
+            $table->text('ParticipantDescription')->nullable();
+            $table->tinyInteger('ShowParticipantEmail')->nullable();
+            $table->tinyInteger('ShowParticipantPhone')->nullable();
+            $table->integer('ParticipantsImageMediaStorageID')->nullable();
+            $table->tinyInteger('InvitationOnly')->nullable();
+            $table->tinyInteger('ShowInvitationOnly')->nullable();
+            $table->text('InvitationOnlyMessage')->nullable();
+            $table->timestamps();
+
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('registrations');
+    }
+}

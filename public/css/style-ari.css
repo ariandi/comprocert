@@ -1,0 +1,71 @@
+.h-new-node{
+	width: 50px;
+	float: left;
+}
+
+.h-new-title{
+	position: relative;
+	top: 15px;
+    left: 15px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.b-node{
+	margin-top: 30px;
+}
+
+.c-menu-b{
+}
+
+.saveChild{
+	margin-right: 8px;
+}
+
+.gmbr-node{
+	width: 100%;
+	height: 200px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.gmbr-node-img{
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 200px;
+	display: block;
+	margin: auto;
+}
+
+.form-inline .form-group{
+	width: 100%;
+}
+
+.form-inline .form-control{
+	width: 100%;
+}
+.idMyProfile{text-transform: capitalize;}
+/* .active{
+	background:red;
+} */
+/* button.btn:active{
+	color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+} */
+.dasar2{background-color:#4c505d;}
+
+.btn-default:focus, .btn-default:hover {
+	color: black;
+	border: 1px solid #42DCA3;
+	outline: none;
+	background-color: #42DCA3;
+  }
+  .copypaste {
+    -webkit-user-select: all; /* Safari 3.1+ */
+    -moz-user-select: all; /* Firefox 2+ */
+    -ms-user-select: all; /* IE 10+ */
+    user-select: all; /* Standard syntax */
+}
+html{-moz-user-select:none;-o-user-select:none;-webkit-user-select:none;user-select:none}p,a,h1,h2,h3,h4,h5,h6,div,br,li,td,article{-moz-user-select:text;-o-user-select:text;-webkit-user-select:text;user-select:text}
