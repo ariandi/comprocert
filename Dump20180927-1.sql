@@ -426,7 +426,7 @@ CREATE TABLE `nodes` (
   `insert_by` int(11) DEFAULT NULL,
   `update_by` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -435,7 +435,7 @@ CREATE TABLE `nodes` (
 
 LOCK TABLES `nodes` WRITE;
 /*!40000 ALTER TABLE `nodes` DISABLE KEYS */;
-INSERT INTO `nodes` VALUES (1,'Menu',NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:18:26','2018-09-26 11:18:26',NULL,NULL,NULL,NULL),(2,'Home','home','Home','Home',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:21:09','2018-09-26 11:21:09','index',NULL,NULL,NULL),(3,'Content 1','content','Content 1','Content 1',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:26:55','2018-09-26 11:26:55','content',NULL,NULL,NULL),(4,'Content 2','content-2','Content 2','Content 2',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:28:51','2018-09-26 11:28:51','content',NULL,NULL,NULL),(5,'Content 3','content-3','Content 3','Content 3',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:29:20','2018-09-26 11:29:20','content',NULL,NULL,NULL),(6,'Content 4','content-4','Content 4','Content 4',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:29:56','2018-09-26 11:29:56','content',NULL,NULL,NULL),(7,'Contact','contact','Contact','Contact',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:30:15','2018-09-26 11:30:15','contact',NULL,NULL,NULL),(8,'Sub Content 1','sub-content-1','Sub Content 1','Sub Content 1',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:30:49','2018-09-26 11:30:49','content',NULL,NULL,NULL),(9,'Sub Content 2','sub-content-2','Sub Content 2','Sub Content 2',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:31:08','2018-09-26 11:31:08','content',NULL,NULL,NULL),(10,'Sub Content 3','sub-content-3','Sub Content 3','Sub Content 3',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:31:24','2018-09-26 11:31:24','content',NULL,NULL,NULL);
+INSERT INTO `nodes` VALUES (1,'Menu',NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:18:26','2018-09-26 11:18:26',NULL,NULL,NULL,NULL),(2,'Home','home','Home','Home',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:21:09','2018-09-26 11:21:09','index',NULL,NULL,NULL),(3,'Content 1','content','Content 1','Content 1',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:26:55','2018-09-26 11:26:55','content',NULL,NULL,NULL),(4,'Content 2','content-2','Content 2','Content 2',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:28:51','2018-09-26 11:28:51','content',NULL,NULL,NULL),(5,'Content 3','content-3','Content 3','Content 3',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:29:20','2018-09-26 11:29:20','content',NULL,NULL,NULL),(6,'Content 4','content-4','Content 4','Content 4',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:29:56','2018-09-26 11:29:56','content',NULL,NULL,NULL),(7,'Contact','contact','Contact','Contact',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:30:15','2018-09-26 11:30:15','contact',NULL,NULL,NULL),(8,'Sub Content 1','sub-content-1','Sub Content 1','Sub Content 1',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:30:49','2018-09-26 11:30:49','content',NULL,NULL,NULL),(9,'Sub Content 2','sub-content-2','Sub Content 2','Sub Content 2',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:31:08','2018-09-26 11:31:08','content',NULL,NULL,NULL),(10,'Sub Content 3','sub-content-3','Sub Content 3','Sub Content 3',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 11:31:24','2018-09-26 11:31:24','content',NULL,NULL,NULL),(11,'Home Content 1','home-content-1','Home Content 1','Home Content 1',1,NULL,NULL,'<p>Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.</p>','<p>Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.</p>',NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 17:31:14','2018-09-26 17:41:06','content',NULL,NULL,NULL),(12,'tigaicon',NULL,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 17:45:14','2018-09-26 17:45:14',NULL,NULL,NULL,NULL),(13,'Thoughts Leadership Platform','bg-starship','0.3s','fa fa-snowflake-o',1,NULL,NULL,'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 17:46:45','2018-09-26 17:59:20','content',NULL,NULL,NULL),(14,'Corporate world Platform','bg-matisse','0.5s','fa fa-circle-o-notch',1,NULL,NULL,'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 17:47:20','2018-09-26 17:59:55','content',NULL,NULL,NULL),(15,'End to End Testing Platform','bg-chathams','0.7s','fa fa-hourglass-o',1,NULL,NULL,'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-26 17:47:58','2018-09-26 17:59:42','content',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `nodes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -455,7 +455,7 @@ CREATE TABLE `nodestructures` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -464,7 +464,7 @@ CREATE TABLE `nodestructures` (
 
 LOCK TABLES `nodestructures` WRITE;
 /*!40000 ALTER TABLE `nodestructures` DISABLE KEYS */;
-INSERT INTO `nodestructures` VALUES (1,1,0,1,0,'2018-09-26 11:18:26','2018-09-26 11:18:26'),(2,2,1,1,0,'2018-09-26 11:21:09','2018-09-26 11:21:09'),(3,3,1,1,0,'2018-09-26 11:26:55','2018-09-26 11:26:55'),(4,4,1,1,0,'2018-09-26 11:28:51','2018-09-26 11:28:51'),(5,5,1,1,0,'2018-09-26 11:29:20','2018-09-26 11:29:20'),(6,6,1,1,0,'2018-09-26 11:29:56','2018-09-26 11:29:56'),(7,7,1,1,0,'2018-09-26 11:30:15','2018-09-26 11:30:15'),(8,8,3,1,0,'2018-09-26 11:30:49','2018-09-26 11:30:49'),(9,9,3,1,0,'2018-09-26 11:31:08','2018-09-26 11:31:08'),(10,10,3,1,0,'2018-09-26 11:31:24','2018-09-26 11:31:24');
+INSERT INTO `nodestructures` VALUES (1,1,0,1,0,'2018-09-26 11:18:26','2018-09-26 11:18:26'),(2,2,1,1,0,'2018-09-26 11:21:09','2018-09-26 11:21:09'),(3,3,1,1,0,'2018-09-26 11:26:55','2018-09-26 11:26:55'),(4,4,1,1,0,'2018-09-26 11:28:51','2018-09-26 11:28:51'),(5,5,1,1,0,'2018-09-26 11:29:20','2018-09-26 11:29:20'),(6,6,1,1,0,'2018-09-26 11:29:56','2018-09-26 11:29:56'),(7,7,1,1,0,'2018-09-26 11:30:15','2018-09-26 11:30:15'),(8,8,3,1,0,'2018-09-26 11:30:49','2018-09-26 11:30:49'),(9,9,3,1,0,'2018-09-26 11:31:08','2018-09-26 11:31:08'),(10,10,3,1,0,'2018-09-26 11:31:24','2018-09-26 11:31:24'),(11,11,0,1,0,'2018-09-26 17:31:14','2018-09-26 17:31:14'),(12,12,0,1,0,'2018-09-26 17:45:14','2018-09-26 17:45:14'),(13,13,12,1,0,'2018-09-26 17:46:45','2018-09-26 17:46:45'),(14,14,12,1,0,'2018-09-26 17:47:20','2018-09-26 17:47:20'),(15,15,12,1,0,'2018-09-26 17:47:58','2018-09-26 17:47:58');
 /*!40000 ALTER TABLE `nodestructures` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1128,4 +1128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-27  2:09:30
+-- Dump completed on 2018-09-27  8:04:58

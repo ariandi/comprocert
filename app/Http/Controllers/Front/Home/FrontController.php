@@ -28,11 +28,13 @@ class FrontController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($alias = 'home')
+    public function index($alias = 'home', Request $request)
     {
-        // $uriPath = $request->path();
-        // $id = 2;
+        $uriPath = $request->path();
 
+        $homeContent1 = Node::where('id', 11)->first();
+
+        $tigaIcon = $this->menus(12);
         // $node = Node::where('id', \Menus::getLangNode())->first();
 
         // $node_om_oss = Node::where('id', \Menus::getLangNodeOther()->om_oss)->first();
@@ -60,7 +62,7 @@ class FrontController extends Controller
         //     }
         // }
 
-        return view('front.home.index', []);
+        return view('front.home.index', ['homeContent1' => $homeContent1, 'tigaIcon' => $tigaIcon]);
     }
 
     public function content($alias = 'home', Request $request)
@@ -117,7 +119,7 @@ class FrontController extends Controller
     {
         $selProdChild = Nodestructures::select('n.title', 'n.alias', 'n.id',
                                                 'n.content1', 'n.content2', 'n.content3', 'n.content4',
-                                                'ms.path')
+                                                'ms.path', 'n.keyword', 'n.description')
                             ->join('nodes as n', 'n.id', '=', 'nodestructures.child_node_id')
                             ->leftjoin('mediastorages as ms', 'n.media1', '=', 'ms.id')
                             ->where(['nodestructures.parent_node_id' => $parent, 'nodestructures.active' => 1, 'n.active' => 1])->get();
