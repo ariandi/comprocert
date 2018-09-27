@@ -1,7 +1,7 @@
 @extends('front.layouts.main')
 
 @section('title')
-Home
+WCS Indonesia | Certification Body
 @endsection
 
 @section('keywords')
@@ -39,8 +39,9 @@ description
               <div class="hero ">
                 <hgroup class="wow fadeInUp">
                     <h1>We Help <span ><a href="" class="typewrite" data-period="2000" data-type='[ " Certification", " Training"]'>
-                      <span class="wrap"></span></a></span> </h1>        
-                    <h3>The next big idea is waiting for its next big changer</h3>
+                      <span class="wrap"></span></a></span> </h1>
+                    <h3>Welcome to WCS Indonesia</h3>        
+                    <h3>World Certification Services (WCS) is a UKAS Accredited Certification Body providing Assessment and Certification Services against many international standards, including ISO 9001, ISO 14001 and OHSAS 18001.</h3>
                 </hgroup>
                 <button class="btn btn-general btn-green wow fadeInUp" role="button">Contact Now</button>
               </div>           

@@ -16,7 +16,7 @@ author Email: db_duabelas@yahoo.com
   <meta name="author" content="Ariandi Nugraha">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <link rel="shortcut icon" href="{{ asset('theme/img/favicon.ico') }}">
+  <link rel="shortcut icon" href="{{ asset('images/wcs-bahanicon.ico') }}">
 
   <title>@yield('title')</title>
 
@@ -48,7 +48,7 @@ author Email: db_duabelas@yahoo.com
             <div class="col-md-7">
               <ul class="list-inline top-contacts">
                 <li>
-                  <i class="fa fa-envelope"></i> Email: <a href="mailto:db_duabelas@yahoo.com">db_duabelas@yahoo.com</a>
+                  <i class="fa fa-envelope"></i> Email: <a href="mailto:info@wcs-indonesia.com">info@wcs-indonesia.com</a>
                 </li>
                 <li>
                   <i class="fa fa-phone"></i> Hotline: (012) 876 10 75
@@ -60,7 +60,7 @@ author Email: db_duabelas@yahoo.com
                 <li><a href="#" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
                 <li><a href="#" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
                 <li><a href="#" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
-                <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>  
+                {{-- <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>  --}} 
               </ul>
             </div>
           </div>
@@ -72,7 +72,7 @@ author Email: db_duabelas@yahoo.com
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
       <div class="container">
         <a class="navbar-brand smooth-scroll" href="index.html">
-          <img src="{{ asset('theme/img/logo-s.png') }}" alt="logo">
+          <img src="{{ asset('images/wcsindologo.jpg') }}" alt="logo">
         </a> 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
               <span class="navbar-toggler-icon"></span>
@@ -258,7 +258,7 @@ author Email: db_duabelas@yahoo.com
                       California, US <br>
                       Phone: 800 123 3456 <br>
                       Fax: 800 123 3456 <br>
-                      Email: <a href="mailto:db_duabelas@yahoo.com" class="">db_duabelas@yahoo.com</a>
+                      Email: <a href="mailto:info@wcs-indonesia.com">info@wcs-indonesia.com</a>
                     </address>  
                     <ul class="list-inline social-icon-f top-data">
                       <li><a href="#" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
@@ -277,7 +277,7 @@ author Email: db_duabelas@yahoo.com
                   <div class="row">
                       <div class="col-md-12">
                           <div id="footer-copyrights">
-                              <p>Copyrights &copy; 2017 All Rights Reserved by Businessbox. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
+                              <p>Copyrights &copy; 2017 All Rights Reserved by WCS Indonesia. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
                           </div>
                       </div> 
                   </div>
