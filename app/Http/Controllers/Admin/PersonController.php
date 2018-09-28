@@ -101,8 +101,9 @@ class PersonController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePerson $request, $id)
     {
+        // dd($request);
         $user = User::find($id);
         if($user){
             $dataCompany = $request->companies;
@@ -142,7 +143,10 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id)->delete();
+        return redirect()
+                        ->back()
+                        ->with('success','Data person has been deleted.');
     }
 
     public function sync()

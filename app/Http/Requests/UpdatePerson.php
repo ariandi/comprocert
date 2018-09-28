@@ -24,17 +24,17 @@ class UpdatePerson extends FormRequest
     public function rules()
     {
         return [
-            'firstName' => 'required|min:5|alpha',
-            'birthDate' => 'required|date',
+            'first_name' => 'required|min:3|alpha',
+            'birth_date' => 'required|date',
             'email' => 'required|email|unique:users,email,' . $this->segment(3),
             'password' => 'sometimes|nullable|min:6|confirmed',
             'password_confirmation' => 'sometimes|nullable|min:6',
-            'company' => 'required|array|min:1',
-            'company.*' => 'required|numeric',
-            'lastName' => 'required|min:5|alpha',
+            'companies' => 'required|array|min:1',
+            'companies.*' => 'required|numeric',
+            'last_name' => 'required|min:3|alpha',
             'gender' => 'required|max:1|alpha',
-            'mobilePhoneNumber' => 'required|max:13|string',
-            'languageID' => 'required|max:2|alpha',
+            'no_hp' => 'required|max:15|string',
+            'lang_id' => 'required|max:2|alpha',
             'role' => 'required|alpha'
         ];
     }

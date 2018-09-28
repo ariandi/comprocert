@@ -110,25 +110,19 @@ Edit Company
 			                </div>
 
 			                <div class="form-group">
-			                  <label for="ProductNumber" class="col-sm-3 control-label">Is Supplier</label>
+			                  <label for="phone2" class="col-sm-3 control-label">Phone 2</label>
 
 			                  <div class="col-sm-9">
-			                  	@if($company->isAccountSupplier == 0)
-			                    	<input type="checkbox" unchecked name="isAccountSupplier" style="position: relative;top: 7px;" value="1">
-			                    @else
-			                    	<input type="checkbox" checked name="isAccountSupplier" style="position: relative;top: 7px;" value="1">
-			                    @endif
+			                  	<input type="text" class="form-control" 
+			                    value="{{ $company->phone2 or old('phone2') }}" placeholder="Phone 2" name="phone2">
 			                  </div>
 			                </div>
 			                <div class="form-group">
-			                  <label for="EAN" class="col-sm-3 control-label">Customer</label>
+			                  <label for="phone3" class="col-sm-3 control-label">Customer</label>
 
 			                  <div class="col-sm-9">
-			                  	@if($company->isAccountCustomer == 0)
-			                    	<input type="checkbox" unchecked name="isAccountCustomer" style="position: relative;top: 7px;" value="1">
-			                    @else
-			                    	<input type="checkbox" checked name="isAccountCustomer" style="position: relative;top: 7px;" value="1">
-			                    @endif
+			                  	<input type="text" class="form-control" 
+			                    value="{{ $company->phone3 or old('phone3') }}" placeholder="Phone 3" name="phone3">
 			                  </div>
 			                </div>
 
@@ -166,16 +160,14 @@ Edit Company
 			                </div>
 
 		                	<div class="form-group">
-			                  <label for="ProductName" class="col-sm-3 control-label">Prospect</label>
+			                  <label for="phone1" class="col-sm-3 control-label">Phone</label>
 
 			                  <div class="col-sm-9">
-			                    @if($company->isAccountProspect == 0)
-			                    	<input type="checkbox" unchecked name="isAccountProspect" style="position: relative;top: 7px;" value="1">
-			                    @else
-			                    	<input type="checkbox" checked name="isAccountProspect" style="position: relative;top: 7px;" value="1">
-			                    @endif
+			                    <input type="text" class="form-control" 
+			                    value="{{ $company->phone1 or old('phone1') }}" placeholder="Phone 1" name="phone1">
 			                  </div>
 			                </div>
+
 			                <div class="form-group">
 			                  <label for="Active" class="col-sm-3 control-label">Active</label>
 
@@ -351,8 +343,8 @@ Edit Company
 			                  <label for="QuantityPerUnit" class="col-sm-3 control-label">Term of payment</label>
 
 			                  <div class="col-sm-9">
-			                  	<textarea name="DeliveryCondition">
-			                  			{{ $company->DeliveryCondition or old('DeliveryCondition') }}
+			                  	<textarea name="PaymentCondition">
+			                  			{{ $company->PaymentCondition or old('PaymentCondition') }}
 			                  	</textarea>
 			                  </div>
 			                </div>

@@ -8,8 +8,8 @@ WCS Indonesia | Certification Body
 Home
 @endsection
 
-@section('keywords')
-description
+@section('description')
+Home
 @endsection
 
 @section('css')
@@ -352,94 +352,4 @@ description
       </div>
     </div>        
   </section>   --}}
-
-  <!--====================================================
-                      CONTACT HOME
-  ======================================================-->
-  <div class="overlay-contact-h"></div>
-  <section id="contact-h" class="bg-parallax contact-h-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="contact-h-cont">
-            <h3 class="cl-white">Continue The Conversation</h3><br>
-            <form>
-              <div class="form-group cl-white">
-                <label for="name">Your Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name"> 
-              </div>  
-              <div class="form-group cl-white">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
-              </div>  
-              <div class="form-group cl-white">
-                <label for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject"> 
-              </div>  
-              <div class="form-group cl-white">
-                <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-              </div>  
-              <button class="btn btn-general btn-white" role="button"><i fa fa-right-arrow></i>GET CONVERSATION</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>         
-  </section> 
-
-  <!--====================================================
-                         NEWS
-  ======================================================-->
-  <section id="comp-offer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3 col-sm-6  desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
-          <h2>Latest News</h2>
-          <div class="heading-border-light"></div> 
-          <button class="btn btn-general btn-green" role="button">See More</button>
-        </div>
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-1.jpg') }}" class="img-fluid" alt="...">
-            </div>
-            <h3>Pricing Strategies for Product</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.6s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-9.jpg') }}" class="img-fluid" alt="...">
-            </div>
-            <h3>Design Exhibitions of 2017</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.8s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-12.jpeg') }}" class="img-fluid" alt="...">
-            </div>
-            <h3>Exciting New Technologies</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Business box. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 @endsection

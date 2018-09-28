@@ -35,32 +35,6 @@ class FrontController extends Controller
         $homeContent1 = Node::where('id', 11)->first();
 
         $tigaIcon = $this->menus(12);
-        // $node = Node::where('id', \Menus::getLangNode())->first();
-
-        // $node_om_oss = Node::where('id', \Menus::getLangNodeOther()->om_oss)->first();
-
-        // $icon1 = Node::where('id', \Menus::getLangNodeOther()->digital)->first();
-        // $icon2 = Node::where('id', \Menus::getLangNodeOther()->change66)->first();
-        // $icon3 = Node::where('id', \Menus::getLangNodeOther()->course)->first();
-        // $icon4 = Node::where('id', \Menus::getLangNodeOther()->consultant)->first();
-
-        // $slideTitleChild = $this->menus(\Menus::getLangNodeOther()->omoss_samping);
-
-        // if($uriPath != '/'){
-        //     $node = Node::where(['Alias' => $uriPath, 'active' => 1])->first();
-        // }
-
-        // $selProd = $this->searchnode(10);
-
-        // $selProdChild = $this->menus(10);
-
-        // $blogchild = $this->menus(43);
-
-        // foreach ($blogchild as $keyb => $valueb) {
-        //     if(!strpos($valueb->path,"images")){
-        //         $blogchild[$keyb]->imagepath = $valueb->path;
-        //     }
-        // }
 
         return view('front.home.index', ['homeContent1' => $homeContent1, 'tigaIcon' => $tigaIcon]);
     }
@@ -69,24 +43,11 @@ class FrontController extends Controller
     {
         $uriPath = urldecode($request->path());
 
-        if($alias == 'profile'){
-            $uriPath = 'profile';
-            $datauser = Session()->get('userData');
-        }
-
         if($uriPath != '/'){
             $node = Node::where(['Alias' => $uriPath, 'active' => 1])->first();
-            $bgslide1 = Node::where('id', $node->id)->first();
         }
 
-        $parentn = \Menus::getLangNodeOther()->node_samping;
-
-        $sideNode = Nodestructures::where(['parent_node_id' => $parentn, 'active' => 1])
-                    ->whereNotIn('child_node_id', ['30'])
-                    ->get();
-
-
-        return view('front.home.'.$node->template, compact(['node', 'bgslide1', 'sideNode','datauser']));
+        return view('front.home.'.$node->template, ['node' => $node]);
     }
 
     public function omoss($alias = 'home', Request $request)

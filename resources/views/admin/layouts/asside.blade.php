@@ -5,7 +5,7 @@
 
     <ul class="sidebar-menu" data-widget="tree">
 
-      <li class="header">MAIN NAVIGATION {{-- {{ Request::is('admin')?'asasasa':'bbbbbbbbb' }} --}}</li>
+      <li class="header">MAIN NAVIGATION</li>
 
       <li class="{{-- treeview  --}}{{ Route::currentRouteName() == 'home'?'active':'' }}">
         <a href="{{ route('home') }}">
@@ -14,10 +14,6 @@
             <i class="fa fa-angle-left pull-right"></i>
           </span>
         </a>
-        {{-- <ul class="treeview-menu">
-          <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Personal </a></li>
-          <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-        </ul> --}}
       </li>
 
       <li class="{{-- treeview  --}}{{ Route::currentRouteName() == 'persons.index'?'active':'' }}">
@@ -48,32 +44,6 @@
         </a>
       </li>
 
-      <li class="{{ Route::currentRouteName() == 'statements.index'?'active':'' }}">
-        <a href="{{ route('statements.index') }}">
-          <i class="fa fa-bar-chart" aria-hidden="true"></i>
-          <span>Statements</span>
-          {{-- <span class="pull-right-container">
-            <span class="label label-primary pull-right">4</span>
-          </span> --}}
-
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-      </li>
-
-      <li class="{{ Route::currentRouteName() == 'languagestring'?'active':'' }}">
-        <a href="{{ route('languagestring') }}">
-          <i class="fa fa-th"></i> <span>Language String</span>
-          {{-- <span class="pull-right-container">
-            <small class="label pull-right bg-green">Hot</small>
-          </span> --}}
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-      </li>
-
       <li class="treeview {{ Route::currentRouteName() == 'products.index'?'active':'' }}">
         <a href="#">
           <i class="fa fa-tasks" aria-hidden="true"></i>
@@ -85,106 +55,6 @@
         <ul class="treeview-menu">
           <li class="{{ Route::currentRouteName() == 'products.index'?'active':'' }}">
             <a href="{{ route('products.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-          <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-          <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-          <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-        </ul>
-      </li>
-
-      <li class="treeview {{ Route::currentRouteName() == 'ordersale.index' ?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-shopping-basket"></i>
-          <span>Order Sale</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ Route::currentRouteName() == 'ordersale.index' ?'active':'' }}">
-            <a href="{{ route('ordersale.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-        </ul>
-      </li>
-
-
-      <li class="treeview {{ Route::currentRouteName() == 'sync.index'?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-refresh" aria-hidden="true"></i>
-          <span>Sync</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ Route::currentRouteName() == 'sync.index'?'active':'' }}">
-            <a href="{{ route('sync.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="treeview {{ Route::currentRouteName() == 'ordersubscription.index' ?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-shopping-basket"></i>
-          <span>Order Subcription</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="">
-            <a href="{{ route('ordersubscriptions.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="treeview {{ Route::currentRouteName() == 'invoice.index' ?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-check-square-o"></i>
-          <span>Invoiceout</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="">
-            <a href="{{ route('invoice.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="treeview 
-      {{ Route::currentRouteName() == 'roles.index'?'active':'' }} 
-      {{ Route::currentRouteName() == 'roles.get-role-action-list'?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-          <span>Role</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ Route::currentRouteName() == 'roles.index'?'active':'' }}">
-            <a href="{{ route('roles.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-          <li class="{{ Route::currentRouteName() == 'roles.get-role-action-list'?'active':'' }}">
-            <a href="{{ route('roles.get-role-action-list') }}"><i class="fa fa-circle-o"></i> Role Action</a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="treeview 
-      {{ Route::currentRouteName() == 'registrations.index'?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-desktop" aria-hidden="true"></i>
-          <span>Registrations</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ Route::currentRouteName() == 'registrations.index'?'active':'' }}">
-            <a href="{{ route('registrations.index') }}"><i class="fa fa-circle-o"></i> List</a>
           </li>
         </ul>
       </li>

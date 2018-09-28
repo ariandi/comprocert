@@ -18,7 +18,8 @@ class Company extends Model
     											'OpenFri','OpenSat','OpenSun','CloseMon','CloseTue','CloseWed','CloseThu','CloseFri','CloseSat','CloseSun',
     											'EnableTaxFree','EnableVat','Frittisisteledd','LogoMediaStorageID','ClassificationID','FoundedDate',
     											'TagLine','AddRegCode','Type','OrgNumber','Facebook','Twitter','LinkedIn','InsertedByPersonID',
-    											'UpdatedByPersonID','isAccountSupplier','isAccountCustomer','isAccountProspect', 'Discount','ExternalID','DCity'];
+    											'UpdatedByPersonID','isAccountSupplier','isAccountCustomer','isAccountProspect', 'Discount','ExternalID','DCity', 
+                                                'phone1', 'phone2', 'phone3'];
 
     public static function getCompanyChild($id)
     {

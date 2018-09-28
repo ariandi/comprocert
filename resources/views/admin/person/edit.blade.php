@@ -12,7 +12,7 @@
 @endsection
 
 @section('css_custom')
-<link href="{{ asset('assets/admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
 @endsection
@@ -60,7 +60,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="firstName">First Name</label>
-							<input type="text" name="firstName" id="first_name" value="{{ $user['data']->first_name }}" class="form-control" />
+							<input type="text" name="first_name" id="first_name" value="{{ $user['data']->first_name }}" class="form-control" />
 							<small class="text-red">{{ $errors->first('first_name') }}</small>
 						</div>
 						<div class="form-group">
@@ -69,7 +69,7 @@
 								<span class="input-group-addon">
 			                        <i class="fa fa-calendar"></i>
 			                    </span>
-			                    <input type="text" name="birthDate" id="birth_date" value="{{ $user['data']->birth_date }}" class="form-control" readonly="" />
+			                    <input type="text" name="birth_date" id="birth_date" value="{{ $user['data']->birth_date }}" class="form-control" readonly="" />
 			                </div>
 			                <small class="text-red">{{ $errors->first('birth_date') }}</small>
 						</div>
@@ -95,7 +95,7 @@
 								<option value="{{ $company->id }}" {{ ((in_array($company->id, $user['hasCompany'])) ? 'selected':'') }} >{{ $company->CompanyName }}</option>
 							@endforeach
 							</select>
-							<small class="text-red">{{ $errors->first('company') }}</small>
+							<small class="text-red">{{ $errors->first('companies') }}</small>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -205,13 +205,21 @@
 @endsection
 
 @section('js_custom')
-<script type="module" src="{{asset('assets/admin/plugins/moment/moment.js')}}"></script>
-<script src="{{ asset('assets/admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js') }}"></script>
+{{-- <script type="module" src="{{asset('assets/admin/plugins/moment/moment.js')}}"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function() {
+
+	$('#birth_date').datepicker({
+		autoclose: true,
+		orientation: 'bottom',
+		format: 'yyyy-mm-dd',
+		todayHighlight: true
+  });
+
 	$('body').on('click', '.userTarget', function(){
 		var target = $(this).attr('target');
 		// var thirdparty = $(this).attr('thirdparty');
