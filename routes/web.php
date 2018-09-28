@@ -68,6 +68,13 @@ Route::group(['middleware' => ['auth', 'role', 'web'], 'prefix' => 'admin'], fun
 	Route::resource('products', 'Admin\ProductController');
 	/// End Module Product
 
+
+	/// Certificate Module
+	Route::get('certificates/get-datatables-data', 
+		'Admin\CertificateController@getDatatablesData')
+		->name('certificates.getdatatablesdata');
+	Route::resource('certificates', 'Admin\CertificateController');
+	/// End Certificate Module
 });
 
 

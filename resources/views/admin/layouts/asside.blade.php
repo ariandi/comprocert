@@ -60,6 +60,16 @@
       </li>
 
 
+      <li class="{{-- treeview --}}{{ Route::currentRouteName() == 'certificates.index'?'active':'' }}">
+        <a href="{{ route('certificates.index') }}">
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span>Certificate</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+      </li>
+
       {{-- <li>
         <a href="../widgets.html">
           <i class="fa fa-th"></i> <span>Widgets</span>

@@ -17,11 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => 'cors'], function(){
+// Route::group(['middleware' => 'cors'], function(){
 	
-	Route::post('languagestring/{languagetext}/{langid}', 'Admin\LanguagestringController@getLanguageString');
+// 	Route::post('languagestring/{languagetext}/{langid}', 'Admin\LanguagestringController@getLanguageString');
 
-	Route::post('user/signin', 'Admin\PersonController@signin');
-	Route::post('user/register', 'Admin\PersonController@register');
+// 	Route::post('user/signin', 'Admin\PersonController@signin');
+// 	Route::post('user/register', 'Admin\PersonController@register');
 
-});
+// });
