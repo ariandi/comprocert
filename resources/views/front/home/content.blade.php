@@ -47,7 +47,7 @@ $node->description
 
                   @if( isset($node->getImages4) )
                   <div class="col-md-12">
-                    <img src="{{ url(Storage::url($node->getImages4->path)) }}" class="img-responsive" style="margin:auto;display: block;">
+                    <img src="{{ url(Storage::url($node->getImages4->path)) }}" class="img-responsive" style="margin:auto;display: block;max-width: 100%;">
                   </div>
                   @endif
 
