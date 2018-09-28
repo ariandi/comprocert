@@ -69,6 +69,7 @@ Certificate
 	                                <th>Certificate No</th>
 	                                <th>File</th>
 	                                <th>Status</th>
+	                                <th>Created At</th>
 	                                <th>Action</th>
 	                            </tr>
 	                        </thead>
@@ -106,6 +107,7 @@ Certificate
 	            {data: 'certificate_no', name: 'certificate_no'},
 	            {data: 'file', name: 'file'},
 	            {data: 'status', name: 'status'},
+	            {data: 'created_at', name: 'created_at'},
 	            {data: 'action', name: 'action', orderable: false, searchable: false}
 	        ]
 	    });

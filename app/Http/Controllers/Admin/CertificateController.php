@@ -179,6 +179,9 @@ class CertificateController extends Controller
                                 return '<a href="'.url(Storage::url($certificates->file)).'">'.$certificates->file.'</a>'
                                         ;
                             })
+                ->editColumn('created_at', function ($certificates) {
+                                return date('d F y', strtotime($certificates->created_at));
+                            })
                 ->addColumn('action', function ($certificates) {
                                 return '<a href="'.route('certificates.edit', ['id' => $certificates->id]).'" class="btn btn-xs btn-primary editProds">
                                             Edit
