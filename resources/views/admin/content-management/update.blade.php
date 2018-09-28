@@ -242,7 +242,7 @@
     </div>
   @endif
 
-  {{ Form::model($nodes, ['route' => ['node.update', $nodes->id], 'method' => 'PUT', 'files' => true, 'id' => 'upload_form']) }}
+  {{ Form::model($nodes, ['route' => ['nodes.update', $nodes->id], 'method' => 'PUT', 'files' => true, 'id' => 'upload_form']) }}
 
   <div id="ajaxLoad">
   <!-- Default box -->
