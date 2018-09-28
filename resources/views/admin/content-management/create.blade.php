@@ -40,7 +40,7 @@ create
       @endif
 
 
-      {!! Form::open(array('route' => 'node.store','method'=>'POST', 'files' => true)) !!}
+      {!! Form::open(array('route' => 'nodes.store','method'=>'POST', 'files' => true)) !!}
         {{ method_field('post') }}
         <input type="hidden" value="{{ $parent }}" name="parent">
         <div class="box-body">

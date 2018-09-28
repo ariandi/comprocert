@@ -115,7 +115,7 @@ $node->description
 
                       <div class="comment-box-sn">
                         <div class="panel panel-primary">
-                          <div class="panel-heading">Check Certificate</div>
+                          <div class="panel-heading">Certificate Check</div>
                           <div class="panel-body">
                             {!! Form::open(['route'=> ['certificates.show', $node->id] , 'method' => 'GET', 'files'=>true]) !!}
                               <input type="text" name="company_name" placeholder="Fill your company name" class="form-control" value="{{ $cert->company_name }}"><br>
