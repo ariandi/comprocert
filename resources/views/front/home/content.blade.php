@@ -44,6 +44,13 @@ $node->description
         <div id="about-p1">
           <div class="container">
               <div class="row">
+
+                  @if( isset($node->getImages4) )
+                  <div class="col-md-12">
+                    <img src="{{ url(Storage::url($node->getImages4->path)) }}" class="img-responsive" style="margin:auto;display: block;">
+                  </div>
+                  @endif
+
                   <div class="col-md-8">
                       <div class="about-p1-cont">
                           {!! $node->content1 !!}
