@@ -313,11 +313,12 @@ author Email: db_duabelas@yahoo.com
                   <div class="col-md-3 col-sm-6 ">
                     <div class="heading-footer"><h2>Useful Links</h2></div>
                     <ul class="list-unstyled link-list">
-                      <li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li> 
-                      <li><a href="project.html">Project</a><i class="fa fa-angle-right"></i></li> 
-                      <li><a href="careers.html">Career</a><i class="fa fa-angle-right"></i></li> 
-                      <li><a href="faq.html">FAQ</a><i class="fa fa-angle-right"></i></li> 
-                      <li><a href="contact.html">Contact us</a><i class="fa fa-angle-right"></i></li> 
+                      @foreach ( Menus::getNavbar(['NodeID' => 1]) as $elfoot )
+                        <li>
+                          <a href="{{ $elfoot->alias }}">{{ $elfoot->title }}</a>
+                          <i class="fa fa-angle-right"></i>
+                        </li>
+                      @endforeach 
                     </ul>
                   </div>
                   <!-- End Recent list -->
