@@ -20,7 +20,7 @@ class NodeController extends Controller
             'languages' => ['en' => 'English', 'no' => 'Norway', 'pl' => 'Polish', 'id' => 'Indonesia'],
             'roles' => ['admin' => 'Admin', 'viewer' => 'Viewer'],
             'template' => [ 'index' => 'Index', 'content' => 'Content', 'contact' => 'Contact', 
-                            'blogg'=>'Blogg'],
+                            'blogg'=>'Blogg', 'cert' => 'Certification'],
         ];
     /**
      * Display a listing of the resource.

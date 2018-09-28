@@ -40,7 +40,8 @@ $node->description
   <!--====================================================
                           ABOUT-P1
   ======================================================-->
-      <section id="about-p1">
+      <section id="home">
+        <div id="about-p1">
           <div class="container">
               <div class="row">
                   <div class="col-md-8">
@@ -57,6 +58,7 @@ $node->description
                   </div>
               </div>
           </div>
+        </div>
       </section>
 
 @endsection

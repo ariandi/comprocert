@@ -9,6 +9,7 @@ use Session;
 use DataTables;
 use Input;
 use App\Entities\Admin\Nodestructures;
+use App\Entities\Admin\Certificate;
 use App\Entities\Admin\Node;
 use App\User;
 use App\Mail\SendEmail;
@@ -47,27 +48,16 @@ class FrontController extends Controller
             $node = Node::where(['Alias' => $uriPath, 'active' => 1])->first();
         }
 
-        return view('front.home.'.$node->template, ['node' => $node]);
-    }
+        $cert = new Certificate();
 
-    public function omoss($alias = 'home', Request $request)
-    {
-        // dd('bjørge_stensbøl_stensbøl_consulting');
-        $uriPath = urldecode($request->path());
-
-        if($uriPath != '/'){
-            $node = Node::where(['Alias' => $uriPath, 'active' => 1])->first();
+        if( \Session::get('cert') ){
+            $cert = \Session::get('cert');
         }
 
-        $parentn = \Menus::getLangNodeOther()->omoss_samping;
-
-        $sideNode = Nodestructures::where(['parent_node_id' => $parentn, 'active' => 1])
-                    ->whereNotIn('child_node_id', ['30'])
-                    ->get();
-
-
-        return view('internett1.front.omoss.index', ['node' => $node, 'sideNode' => $sideNode]);
+        return view('front.home.'.$node->template, ['node' => $node, 'cert' => $cert]);
     }
+
+    
 
 
     public function searchnode($id = 1)
@@ -85,18 +75,6 @@ class FrontController extends Controller
                             ->leftjoin('mediastorages as ms', 'n.media1', '=', 'ms.id')
                             ->where(['nodestructures.parent_node_id' => $parent, 'nodestructures.active' => 1, 'n.active' => 1])->get();
         return $selProdChild;
-    }
-
-    public function changeLanguage($langID = 'no')
-    {
-        session(['LanguageID' => $langID]);
-        return back();
-    }
-
-    public function resetPasswordAllUser()
-    {
-        $userUpdates = \DB::table('users')->update(['password' => bcrypt('123456')]);
-        return $userUpdates;
     }
 
     public function sendEmailSubscript(Request $request)
@@ -138,11 +116,6 @@ class FrontController extends Controller
         //$sendemail = Mail::to($datauser->email)->send(new SendEmail($objDemo));
         return redirect()->route('front.home')
                         ->with('success','Tusen takk');
-    }
-
-    public function registerfront(Request $request)
-    {
-        return view('front.auth.loginfront');
     }
 }
 
