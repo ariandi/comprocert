@@ -22,7 +22,7 @@
 
                   <div class="col-md-3">
                     <div class="gmbr-node">
-                      <img src="{{ $nodes->getImages?Storage::url($nodes->getImages->path):'' }}" 
+                      <img src="{{ $nodes->getImages?url( Storage::url($nodes->getImages->path )):'' }}" 
                       class="img-responsive gmbr-node-img" />
                     </div>
                   </div>
@@ -53,7 +53,7 @@
 
                   <div class="col-md-3">
                     <div class="gmbr-node">
-                      <img src="{{ $nodes->getImages2?Storage::url($nodes->getImages2->path):'' }}" 
+                      <img src="{{ $nodes->getImages2?url(Storage::url($nodes->getImages2->path)):'' }}" 
                       class="img-responsive gmbr-node-img" />
                     </div>
                   </div>
@@ -85,7 +85,7 @@
 
                   <div class="col-md-3">
                     <div class="gmbr-node">
-                      <img src="{{ $nodes->getImages3?Storage::url($nodes->getImages3->path):'' }}" 
+                      <img src="{{ $nodes->getImages3?url(Storage::url($nodes->getImages3->path)):'' }}" 
                       class="img-responsive gmbr-node-img" />
                     </div>
                   </div>
@@ -117,7 +117,7 @@
 
                   <div class="col-md-3">
                     <div class="gmbr-node">
-                      <img src="{{ $nodes->getImages4?Storage::url($nodes->getImages4->path):'' }}" 
+                      <img src="{{ $nodes->getImages4?url(Storage::url($nodes->getImages4->path)):'' }}" 
                       class="img-responsive gmbr-node-img" />
                     </div>
                   </div>

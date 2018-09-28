@@ -89,175 +89,31 @@ Home
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.2s">
-          <h2>What We Offer</h2>
+          <h2>{{ $whatWeOffer->title }}</h2>
           <div class="heading-border-light"></div> 
           <button class="btn btn-general btn-green" role="button">See Curren Offers</button>
-          <button class="btn btn-general btn-white" role="button">Contact Us Today</button>
+          <a class="btn btn-general btn-white" role="button" href="{{ url('contact') }}">Contact Us Today</a>
         </div>
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-11.jpg') }}" class="img-fluid" alt="...">
+        @foreach ($whatWeOfferChild as $wwoc)
+          <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
+            <div class="desc-comp-offer-cont">
+              <div class="thumbnail-blogs">
+                  <div class="caption">
+                    <i class="fa fa-chain"></i>
+                  </div>
+                  <img src="{{ url(Storage::url($wwoc->path)) }}" class="img-fluid" alt="...">
+              </div>
+              <h3>{{ $wwoc->title }}</h3>
+              <p class="desc">{{ $wwoc->keyword }}</p>
+              <a href="{{ $wwoc->alias }}"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
             </div>
-            <h3>Business Management</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
           </div>
-        </div>          
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.6s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-13.jpg') }}" class="img-fluid" alt="...">
-            </div>              
-            <h3>Leadership Development</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.8s">
-          <div class="desc-comp-offer-cont">
-            <div class="thumbnail-blogs">
-                <div class="caption">
-                  <i class="fa fa-chain"></i>
-                </div>
-                <img src="{{ asset('theme/img/news/news-14.jpg') }}" class="img-fluid" alt="...">
-            </div>
-            <h3>Social benefits and services</h3>
-            <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. </p>
-            <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </section>
 
-  <!--====================================================
-                       WHAT WE DO
-  ======================================================-->
-  <section class="what-we-do bg-gradiant">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-          <h3>What we Do</h3>
-          <div class="heading-border-light"></div> 
-          <p class="desc">We partner with clients to put recommendations into practice. </p>
-        </div>
-        <div class="col-md-9">
-          <div class="row">
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-briefcase"></i>
-                <h6>Workspace</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-shopping-bag"></i>
-                <h6>Storefront</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-building-o"></i>
-                <h6>Apartments</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-bed"></i>
-                <h6>Hotels</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-hourglass-2"></i>
-                <h6>Concept</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-            <div class="col-md-4  col-sm-6">
-              <div class="what-we-desc">
-                <i class="fa fa-cutlery"></i>
-                <h6>Restaurant</h6>
-                <p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>      
-  </section> 
-
-  <!--====================================================
-                        STORY
-  ======================================================--> 
-  <section id="story">
-      <div class="container">
-        <div class="row title-bar">
-          <div class="col-md-12">
-            <h1 class="wow fadeInUp">Our Success Tranformation Story</h1>
-            <div class="heading-border"></div> 
-          </div>
-        </div>
-      </div>  
-      <div class="container-fluid">
-        <div class="row" >
-          <div class="col-md-6" >
-            <div class="story-himg" >
-              <img src="{{ asset('theme/img/image-4.jpg') }}" class="img-fluid" alt="">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="story-desc">
-              <h3>How to grow world with Us</h3>
-              <div class="heading-border-light"></div> 
-              <p>Everyone defines success differently – as much as there are people, there are different opinions. Number one in our priority list is the success of our students, alumni and their employers. We work hard in the name of the success of our alumni – being among the best and holding the high employment rate. Many desktop publishing packages and web page editors now use Lorem Ipsum.. </p>
-              <p>You can find some thoughts on success from our students and alumni here – every story is unique, but this is what success is. Everybody sees it differently. Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
-              <p class="text-right" style="font-style: italic; font-weight: 700;"><a href="#">Businessbox</a></p>
-              <div class="title-but"><button class="btn btn-general btn-green" role="button">Read More</button></div>
-            </div>
-          </div>
-        </div>
-      </div>  
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"> 
-            <div class="story-descb">
-                <img src="{{ asset('theme/img/news/news-10.jpg') }}" class="img-fluid" alt="...">
-                <h6>Virtual training systems</h6>
-                <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"> 
-            <div class="story-descb">
-                <img src="{{ asset('theme/img/news/news-2.jpg') }}" class="img-fluid" alt="...">
-                <h6>Design planning</h6>
-                <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                <a href=""><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"> 
-            <div class="story-descb">
-                <img src="{{ asset('theme/img/news/news-8.jpg') }}" class="img-fluid" alt="...">
-                <h6>Remote condition monitoring</h6>
-                <p>Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                <a href=""><i class="fa fa-arrow-circle-o-right"></i> Read More</a>
-            </div>
-          </div>                        
-        </div>
-      </div>  
-  </section>
+  
 
   <!--====================================================
                     COMPANY THOUGHT

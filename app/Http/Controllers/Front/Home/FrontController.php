@@ -34,10 +34,15 @@ class FrontController extends Controller
         $uriPath = $request->path();
 
         $homeContent1 = Node::where('id', 11)->first();
+        $whatWeOffer = Node::where('id', 25)->first();
 
         $tigaIcon = $this->menus(12);
+        $whatWeOfferChild = $this->menus(25);
 
-        return view('front.home.index', ['homeContent1' => $homeContent1, 'tigaIcon' => $tigaIcon]);
+        return view('front.home.index', ['homeContent1' => $homeContent1, 
+                                            'tigaIcon' => $tigaIcon,
+                                            'whatWeOffer' => $whatWeOffer,
+                                            'whatWeOfferChild' => $whatWeOfferChild]);
     }
 
     public function content($alias = 'home', Request $request)
