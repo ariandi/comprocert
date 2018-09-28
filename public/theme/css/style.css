@@ -251,7 +251,8 @@ p {
 
     .navbar-nav>li>a {
         color: #808282 !important; 
-        font-size: 14.5px;
+        /*font-size: 14.5px;*/
+        font-size: 13px;
         font-weight: 700;
         font-family: "hine", sans-serif;
         text-transform: uppercase;

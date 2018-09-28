@@ -71,7 +71,7 @@ author Email: db_duabelas@yahoo.com
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
       <div class="container">
-        <a class="navbar-brand smooth-scroll" href="index.html">
+        <a class="navbar-brand smooth-scroll" href="/">
           <img src="{{ asset('images/wcsindologo.jpg') }}" alt="logo">
         </a> 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> 
