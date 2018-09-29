@@ -32,10 +32,28 @@ class Menus
 		];
 
 		$data = DB::table('nodestructures AS ns')
-		->select('n.alias', 'n.title', 'n.id', 'n.template')
+		->select('n.alias', 'n.title', 'n.id', 'n.template', 'ms.path As medianode1', 
+					'ms2.Path As medianode2', 'ms3.Path As medianode3', 'ms4.Path As medianode4',
+					'n.content1', 'n.content2', 'n.content3', 'n.content4')
 		->leftJoin('nodes AS n', function ($join) {
 			$join->on('n.id', '=', 'ns.child_node_id')
 				 ->where('ns.active', '1');
+		})
+		->leftJoin('mediastorages AS ms', function ($join) {
+			$join->on('n.media1', '=', 'ms.id')
+				 ->where('ms.active', '1');
+		})
+		->leftJoin('mediastorages AS ms2', function ($join) {
+			$join->on('n.media2', '=', 'ms2.id')
+				 ->where('ms2.active', '1');
+		})
+		->leftJoin('mediastorages AS ms3', function ($join) {
+			$join->on('n.media3', '=', 'ms3.id')
+				 ->where('ms3.active', '1');
+		})
+		->leftJoin('mediastorages AS ms4', function ($join) {
+			$join->on('n.media4', '=', 'ms4.id')
+				 ->where('ms4.active', '1');
 		})
 		->where($where)
 		->orderBy('ns.priority', 'ASC');
@@ -79,11 +97,6 @@ class Menus
 			['n.id', '=', $params['NodeID']],
 			['n.active', '=', '1'],
 		];
-
-		// if( isset($params['validfdt'])) {
-		// 	array_push($where, ['ValidFromDateTime', '<=', $params['validfdt']]);
-		// 	array_push($where, ['ValidToDateTime', '>=', $params['validfdt']]);
-		// }
 
 		$data = DB::table('nodes AS n')
 		->select('n.alias', 'n.title', 'n.id', 'ms.path As medianode1', 'ms2.Path As medianode2',

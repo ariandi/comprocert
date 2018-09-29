@@ -47,6 +47,12 @@ class FrontController extends Controller
 
     public function content($alias = 'home', Request $request)
     {
+        if( $alias == 'service' ){
+            return redirect('iso-9001');
+        }else if( $alias == 'about-wcs' ){
+            return redirect('wcs-indonesia');
+        }
+
         $uriPath = urldecode($request->path());
 
         if($uriPath != '/'){
