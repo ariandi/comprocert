@@ -183,19 +183,23 @@ class CertificateController extends Controller
                                 return date('d F y', strtotime($certificates->created_at));
                             })
                 ->addColumn('action', function ($certificates) {
-                                return '<a href="'.route('certificates.edit', ['id' => $certificates->id]).'" class="btn btn-xs btn-primary editProds">
-                                            Edit
-                                        </a> 
 
-                                        <form method="post" action="'.route('certificates.destroy', $certificates->id).'" 
-                                                style="display: inline;">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <input type="hidden" name="_token" value="'.csrf_token().'">
-                                                <button class="btn btn-xs btn-danger">
-                                                    Delete
-                                                </button>
-                                                </form>';
-                            })
+                        $delete = '';
+                        if(Auth::user()->role == 'admin'){
+                            $delete = '<form method="post" action="'.route('certificates.destroy', $certificates->id).'" 
+                                        style="display: inline;">
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="'.csrf_token().'">
+                                        <button class="btn btn-xs btn-danger">
+                                            Delete
+                                        </button>
+                                        </form>';
+                        }
+
+                        return '<a href="'.route('certificates.edit', ['id' => $certificates->id]).'" class="btn btn-xs btn-primary editProds">
+                                    Edit
+                                </a> '.$delete;
+                                        })
                 ->rawColumns(['action', 'file'])
                 ->make(true);
     }

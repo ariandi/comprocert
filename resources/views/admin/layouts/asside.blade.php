@@ -44,21 +44,6 @@
         </a>
       </li>
 
-      <li class="treeview {{ Route::currentRouteName() == 'products.index'?'active':'' }}">
-        <a href="#">
-          <i class="fa fa-tasks" aria-hidden="true"></i>
-          <span>Product</span>
-          <span class="pull-right-container">
-            <i class="fa fa-angle-left pull-right"></i>
-          </span>
-        </a>
-        <ul class="treeview-menu">
-          <li class="{{ Route::currentRouteName() == 'products.index'?'active':'' }}">
-            <a href="{{ route('products.index') }}"><i class="fa fa-circle-o"></i> List</a>
-          </li>
-        </ul>
-      </li>
-
 
       <li class="{{-- treeview --}}{{ Route::currentRouteName() == 'certificates.index'?'active':'' }}">
         <a href="{{ route('certificates.index') }}">

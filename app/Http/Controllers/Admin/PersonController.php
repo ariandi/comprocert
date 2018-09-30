@@ -167,12 +167,9 @@ class PersonController extends Controller
         $data = User::select(['first_name', 'last_name', 'email']);
 
         return DataTables::of(User::query())->addColumn('action', function ($data) {
-            return '
-                <a href="' . route('persons.edit', [$data->id]) . '" class="btn btn-xs btn-primary">
-                    <i class="glyphicon glyphicon-edit"></i> Edit
-                </a>
-                
-                <form method="post" action="'.route('persons.destroy', $data->id).'" 
+            $delete = '';
+            if(Auth::user()->role == 'admin'){
+                $delete = '<form method="post" action="'.route('persons.destroy', $data->id).'" 
                                                 style="display: inline;">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="'.csrf_token().'">
@@ -180,6 +177,12 @@ class PersonController extends Controller
                                                     Delete
                                                 </button>
                                                 </form>';
+            }
+
+            return '
+                <a href="' . route('persons.edit', [$data->id]) . '" class="btn btn-xs btn-primary">
+                    <i class="glyphicon glyphicon-edit"></i> Edit
+                </a> '.$delete;
         })->make(true);
     }
 

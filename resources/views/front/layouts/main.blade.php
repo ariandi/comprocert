@@ -293,7 +293,11 @@ author Email: db_duabelas@yahoo.com
                     <ul class="list-unstyled link-list">
                       @foreach ( Menus::getNavbar(['NodeID' => 1]) as $elfoot )
                         <li>
-                          <a href="{{ $elfoot->alias }}">{{ $elfoot->title }}</a>
+                          @if ( count(Menus::getNavbar(['NodeID' => $elfoot->id])) > 0 )
+                            <a href="{{ Menus::getNavbar(['NodeID' => $elfoot->id])[0]->alias }}">{{ $elfoot->title }}</a>
+                          @else
+                            <a href="{{ $elfoot->alias }}">{{ $elfoot->title }}</a>
+                          @endif
                           <i class="fa fa-angle-right"></i>
                         </li>
                       @endforeach 

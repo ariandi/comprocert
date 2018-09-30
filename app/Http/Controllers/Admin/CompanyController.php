@@ -175,7 +175,9 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $company = Company::find($id)->delete();
+
+        return redirect()->back();
     }
 
     public function getDatatablesData($parent = 0)
@@ -205,9 +207,18 @@ class CompanyController extends Controller
                                 $detail = ' <a href="'.route('companies.edit', ['id' => $company->id]).'" class="btn btn-xs btn-success editProds">
                                             <i class="glyphicon glyphicon-zoom-in"></i> See Detail
                                         </a>';
-                                $delete = ' <a href="'.route('companies.edit', ['id' => $company->id]).'" class="btn btn-xs btn-danger editProds">
-                                            <i class="glyphicon glyphicon-zoom-in"></i> Danger
-                                        </a>';
+
+                                $delete = '';
+                                if(Auth::user()->role == 'admin'){
+                                    $delete = '<form method="post" action="'.route('companies.destroy', $company->id).'" 
+                                            style="display: inline;">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="_token" value="'.csrf_token().'">
+                                            <button class="btn btn-xs btn-danger">
+                                                Delete
+                                            </button>
+                                            </form>';
+                                }
 
                                 if($companyStructure <= 0){
                                     $child = '';

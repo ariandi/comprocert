@@ -110,7 +110,10 @@ class CommentController extends Controller
                                 return date('d F y', strtotime($comments->created_at));
                             })
                 ->addColumn('action', function ($comments) {
-                                return '<form method="post" action="'.route('comments.destroy', $comments->id).'" 
+
+                                $delete = '#';
+                                if(Auth::user()->role == 'admin'){
+                                    $delete = '<form method="post" action="'.route('comments.destroy', $comments->id).'" 
                                                 style="display: inline;">
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="hidden" name="_token" value="'.csrf_token().'">
@@ -118,6 +121,8 @@ class CommentController extends Controller
                                             Delete
                                         </button>
                                         </form>';
+                                }
+                                return $delete;
                             })
                 ->rawColumns(['action'])
                 ->make(true);

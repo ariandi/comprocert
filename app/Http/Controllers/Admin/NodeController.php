@@ -165,7 +165,7 @@ class NodeController extends Controller
      */
     public function destroy($id)
     {
-        $node = Node::find($id)->delete();
+        // $node = Node::find($id)->delete();
 
         $NodeStruct = Nodestructures::where(['child_node_id' => $id])->delete();
 
