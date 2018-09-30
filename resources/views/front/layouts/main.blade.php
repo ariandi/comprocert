@@ -212,7 +212,7 @@ author Email: db_duabelas@yahoo.com
       <div class="row">
         <div class="col-md-6">
           <div class="contact-h-cont">
-            <h3 class="cl-white">Continue The Conversation</h3><br>
+            <h3 class="cl-white">{{ Menus::getNodeWithImg(['NodeID' => 38])->title }}</h3><br>
             <form action="{{ route('comments.store') }}" method="post">
               @csrf
               <div class="form-group cl-white">
@@ -343,7 +343,12 @@ author Email: db_duabelas@yahoo.com
                   <div class="row">
                       <div class="col-md-12">
                           <div id="footer-copyrights">
-                              <p>Copyrights &copy; 2018 All Rights Reserved by WCS Indonesia. <a href="#">Privacy Policy</a> <a href="#">Terms of Services</a></p>
+                              <p>Copyrights &copy; 2018 All Rights Reserved by WCS Indonesia. 
+                              @foreach (Menus::getNavbar(['NodeID' => 33, 'limit' => 2]) as $term)
+                              <a href="{{ $term->alias }}">{{ $term->title }}</a> 
+                              {{-- <a href="#">Terms of Services</a> --}}
+                              @endforeach
+                              </p>
                           </div>
                       </div> 
                   </div>

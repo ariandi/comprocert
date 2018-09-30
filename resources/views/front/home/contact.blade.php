@@ -81,7 +81,7 @@ $node->description
           <input type="text" name="name" placeholder="Full Name" class="form-control" required>
         </div>
         <div class="col-md-4">
-          <input type="text" name="email" placeholder="Email Id" class="form-control" name="email" required>
+          <input type="text" name="email" placeholder="Email" class="form-control" name="email" required>
         </div>
         <div class="col-md-4">
           <input type="text" name="subject" placeholder="Subject" class="form-control" required>
