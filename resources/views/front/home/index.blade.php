@@ -122,16 +122,15 @@ Home
   <section id="thought" class="bg-parallax thought-bg">
     <div class="container">
       <div id="thought-desc" class="row title-bar title-bar-thought owl-carousel owl-theme">
-        <div class="col-md-12 ">
-          <div class="heading-border bg-white"></div>
-          <p class="wow fadeInUp" data-wow-delay="0.4s">Businessbox will deliver value to all the stakeholders and will attain excellence and leadership through such delivery of value. We will strive to support the stakeholders in all activities related to us. Businessbox provide great things.</p>
-          <h6>John doe</h6>
-        </div>
-        <div class="col-md-12 thought-desc">
-          <div class="heading-border bg-white"></div>
-          <p class="wow fadeInUp" data-wow-delay="0.4s">Ensuring quality in Businessbox is an obsession and the high quality standards set by us are achieved through a rigorous quality assurance process. Quality assurance is performed by an independent team of trained experts for each project. </p>
-          <h6>Tom John</h6>
-        </div>
+        @foreach ($quotesChild as $qc)
+          <div class="col-md-12 ">
+            <div class="heading-border bg-white"></div>
+            <p class="wow fadeInUp" data-wow-delay="0.4s">
+              {!! strip_tags($qc->content1) !!}
+            </p>
+            <h6>{{ $qc->title }}</h6>
+          </div>
+        @endforeach
       </div>
     </div>         
   </section> 
@@ -149,23 +148,21 @@ Home
           </div>
           <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="service-h-desc">
-              <h3>We are Providing great Services</h3>
-              <div class="heading-border-light"></div> 
-              <p>Businessbox offer the full spectrum of services to help organizations work better. Everything from creating standards of excellence to training your people to work in more effective ways.</p>  
+              <h3>{{ $provided->title }}</h3>
+              <div class="heading-border-light"></div>
+              {!! $provided->content1 !!} 
             <div class="service-h-tab"> 
               <nav class="nav nav-tabs" id="myTab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-expanded="true">Developing</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile">Training</a> 
-                <a class="nav-item nav-link" id="my-profile-tab" data-toggle="tab" href="#my-profile" role="tab" aria-controls="my-profile">Medical</a> 
+                @foreach ($providedChild as $kpc => $pc)
+                  <a class="nav-item nav-link {{ $kpc==0?'active':'' }}" id="nav-{{ $pc->id }}-tab" data-toggle="tab" href="#nav-{{ $pc->id }}" role="tab" aria-controls="nav-{{ $pc->id }}" aria-expanded="{{ $kpc==0?'true':'false' }}">{{ $pc->title }}</a>
+                @endforeach
               </nav>
               <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute. exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute. </p></div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                  <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute</p>
-                </div> 
-                <div class="tab-pane fade" id="my-profile" role="tabpanel" aria-labelledby="my-profile-tab">
-                  <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet aliquip ipsum aute</p>
-                </div> 
+                @foreach ($providedChild as $kpc2 => $pc2)
+                  <div class="tab-pane fade {{ $kpc2==0?'show active':'' }}" id="nav-{{ $pc2->id }}" role="tabpanel" aria-labelledby="nav-{{ $pc2->id }}-tab">
+                    {!! $pc2->content2 !!}
+                  </div>
+                @endforeach
               </div>
             </div>
             </div>

@@ -76,6 +76,13 @@ Route::group(['middleware' => ['auth', 'role', 'web'], 'prefix' => 'admin'], fun
 		->name('certificates.getdatatablesdata');
 	Route::resource('certificates', 'Admin\CertificateController');
 	/// End Certificate Module
+
+	/// Comment Module
+	Route::get('comments/get-datatables-data', 
+		'Front\Home\CommentController@getDatatablesData')
+		->name('comments.getdatatablesdata');
+	Route::resource('comments', 'Front\Home\CommentController');
+	/// End Comment Module
 });
 
 

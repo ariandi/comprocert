@@ -213,22 +213,23 @@ author Email: db_duabelas@yahoo.com
         <div class="col-md-6">
           <div class="contact-h-cont">
             <h3 class="cl-white">Continue The Conversation</h3><br>
-            <form>
+            <form action="{{ route('comments.store') }}" method="post">
+              @csrf
               <div class="form-group cl-white">
                 <label for="name">Your Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name"> 
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" name="name" required> 
               </div>  
               <div class="form-group cl-white">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required> 
               </div>  
               <div class="form-group cl-white">
                 <label for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject"> 
+                <input type="text" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject" name="subject" required> 
               </div>  
               <div class="form-group cl-white">
                 <label for="message">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea class="form-control" id="message" rows="3" required name="message"></textarea>
               </div>  
               <button class="btn btn-general btn-white" role="button"><i fa fa-right-arrow></i>GET CONVERSATION</button>
             </form>
@@ -250,7 +251,7 @@ author Email: db_duabelas@yahoo.com
           <button class="btn btn-general btn-green" role="button">See More</button>
         </div>
 
-        @foreach (Menus::getNavbar(['NodeID' => 29]) as $element)
+        @foreach (Menus::getNavbar(['NodeID' => 29, 'limit' => 3]) as $element)
           <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s">
             <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
@@ -367,6 +368,19 @@ author Email: db_duabelas@yahoo.com
       <!-- Plugin JavaScript -->
       <script src="{{ asset('theme/js/jquery-easing/jquery.easing.min.js') }}"></script> 
       <script src="{{ asset('theme/js/custom.js') }}"></script> 
+
+      @if (\Session::has('success-message'))
+        <script src="{{ asset('js/bootstrap-notify.min.js') }}"></script>
+        <script type="text/javascript">
+          $.notify({
+            title: '<strong>Success!</strong>',
+            message: 'Success send meesage to us.'
+          },{
+            type: 'success'
+          });
+        </script>
+      @endif
+      
       @yield('js')
 
 </body>

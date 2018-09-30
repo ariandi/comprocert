@@ -34,7 +34,7 @@ class Menus
 		$data = DB::table('nodestructures AS ns')
 		->select('n.alias', 'n.title', 'n.id', 'n.template', 'ms.path As medianode1', 
 					'ms2.Path As medianode2', 'ms3.Path As medianode3', 'ms4.Path As medianode4',
-					'n.content1', 'n.content2', 'n.content3', 'n.content4')
+					'n.content1', 'n.content2', 'n.content3', 'n.content4', 'n.created_at')
 		->leftJoin('nodes AS n', function ($join) {
 			$join->on('n.id', '=', 'ns.child_node_id')
 				 ->where('ns.active', '1');

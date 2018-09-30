@@ -70,6 +70,16 @@
         </a>
       </li>
 
+      <li class="{{-- treeview --}}{{ Route::currentRouteName() == 'comments.index'?'active':'' }}">
+        <a href="{{ route('comments.index') }}">
+          <i class="fa fa-commenting" aria-hidden="true"></i>
+          <span>Comment</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+      </li>
+
       {{-- <li>
         <a href="../widgets.html">
           <i class="fa fa-th"></i> <span>Widgets</span>

@@ -35,14 +35,20 @@ class FrontController extends Controller
 
         $homeContent1 = Node::where('id', 11)->first();
         $whatWeOffer = Node::where('id', 25)->first();
+        $provided = Node::where('id', 37)->first();
 
         $tigaIcon = $this->menus(12);
         $whatWeOfferChild = $this->menus(25);
+        $quotesChild = $this->menus(34);
+        $providedChild = $this->menus(37);
 
         return view('front.home.index', ['homeContent1' => $homeContent1, 
                                             'tigaIcon' => $tigaIcon,
                                             'whatWeOffer' => $whatWeOffer,
-                                            'whatWeOfferChild' => $whatWeOfferChild]);
+                                            'whatWeOfferChild' => $whatWeOfferChild,
+                                            'quotesChild' => $quotesChild,
+                                            'provided' => $provided,
+                                            'providedChild' => $providedChild]);
     }
 
     public function content($alias = 'home', Request $request)

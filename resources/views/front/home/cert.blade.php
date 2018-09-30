@@ -101,7 +101,7 @@ $node->description
               <div class="row">
                   <div class="col-md-8" style="margin: 0 auto;">
                       
-                      @if (Session::has('success'))
+                      @if (\Session::has('success'))
                         <div class="alert alert-success notif">
                             <p>{{ Session::get('success') }}</p>
                         </div><br />
