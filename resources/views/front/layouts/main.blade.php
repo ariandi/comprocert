@@ -305,18 +305,14 @@ author Email: db_duabelas@yahoo.com
                   <div class="col-md-3 col-sm-6 ">
                     <div class="heading-footer"><h2>Recent Post Entries</h2></div>
                     <ul class="list-unstyled thumb-list">
-                      <li>
-                        <div class="overflow-h">
-                          <a href="#">Praesent ut consectetur diam.</a>
-                          <small>02 OCT, 2017</small>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="overflow-h">
-                          <a href="#">Maecenas pharetra tellus et fringilla.</a>
-                          <small>02 OCT, 2017</small>
-                        </div>
-                      </li>
+                      @foreach (Menus::getNavbar(['NodeID' => 29, 'limit' => 2]) as $element)
+                        <li>
+                          <div class="overflow-h">
+                            <a href="#">{{ $element->title }}.</a>
+                            <small>{{ date('d M, Y', strtotime($element->created_at)) }}</small>
+                          </div>
+                        </li>
+                      @endforeach
                     </ul>
                   </div>
                   <!-- End Recent Blog Entries -->
