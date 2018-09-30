@@ -308,7 +308,7 @@ author Email: db_duabelas@yahoo.com
                       @foreach (Menus::getNavbar(['NodeID' => 29, 'limit' => 2]) as $element)
                         <li>
                           <div class="overflow-h">
-                            <a href="#">{{ $element->title }}.</a>
+                            <a href="{{ Url('/'.$element->alias) }}">{{ $element->title }}.</a>
                             <small>{{ date('d M, Y', strtotime($element->created_at)) }}</small>
                           </div>
                         </li>
