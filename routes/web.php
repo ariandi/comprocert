@@ -17,6 +17,7 @@
 
 Route::get('/', 'Front\Home\FrontController@index')->name('front.home');
 Route::get('/home', 'Front\Home\FrontController@index')->name('front.home');
+Route::post('/comments/store-front', 'Front\Home\CommentController@storeFront')->name('comments.store-front');
 
 Route::get('/loginadmin', 'Auth\LoginController@loginadmin')->name('loginadmin');
 Route::get('/registerfronts', 'Front\Home\FrontController@registerfront')->name('registerfronts');

@@ -122,4 +122,19 @@ class CommentController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
     }
+
+    public function storeFront(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+        
+        $comment = Comment::create($request->all());
+        if($comment){
+            return redirect()->back()->with('success-message', 'Success send meesage to us.');
+        }
+    }
 }

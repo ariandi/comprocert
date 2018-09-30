@@ -82,7 +82,7 @@ $node->description
         </div>
         <div class="ad-box-sn"> 
           <h3 class="pb-2">Our Services</h3>
-          @foreach (Menus::getNavbar(['NodeID' => 29, 'limit' => 3]) as $serList)
+          @foreach (Menus::getNavbar(['NodeID' => 37, 'limit' => 3]) as $serList)
             <div class="card">
               <div class="desc-comp-offer-cont">
               <div class="thumbnail-blogs">
@@ -93,11 +93,11 @@ $node->description
               </div>
               <h3>{{ $serList->title }}</h3>
               <p class="desc">Clamp meter connected to an AC monitors the current flow and indicates usage (range) through green, orange and red colour codes.</p>
-              <a href="#"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
+              <a href="{{ Url('/'.$serList->alias) }}"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
               </div>
             </div>
           @endforeach
-          
+
         </div>
       </div> 
     </div>

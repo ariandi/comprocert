@@ -74,18 +74,19 @@ $node->description
 ======================================================--> 
 <service class="contact-p2" id="contact-p2">
   <div class="container">
-    <form>
+    <form action="{{ route('comments.store-front') }}" method="post">
+      @csrf
       <div class="row con-form">
         <div class="col-md-4">
-          <input type="text" name="full-name" placeholder="Full Name" class="form-control">
+          <input type="text" name="name" placeholder="Full Name" class="form-control" required>
         </div>
         <div class="col-md-4">
-          <input type="text" name="email" placeholder="Email Id" class="form-control">
+          <input type="text" name="email" placeholder="Email Id" class="form-control" name="email" required>
         </div>
         <div class="col-md-4">
-          <input type="text" name="subject" placeholder="Subject" class="form-control">
+          <input type="text" name="subject" placeholder="Subject" class="form-control" required>
         </div>
-        <div class="col-md-12"><textarea name="" id=""></textarea></div>
+        <div class="col-md-12"><textarea name="message" id="" placeholder="Message" style="padding: 15px;" required></textarea></div>
         <div class="col-md-12 sub-but"><button class="btn btn-general btn-white" role="button">Send</button></div>
       </div>
     </form>
