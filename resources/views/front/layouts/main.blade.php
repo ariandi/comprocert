@@ -117,7 +117,7 @@ author Email: db_duabelas@yahoo.com
                                 <a href="mailto:{{ App\Entities\Admin\Company::find(1)->Email }}">{{ App\Entities\Admin\Company::find(1)->Email }}</a>
                             </li>
                             <li>
-                              <i class="fa fa-phone"></i> Hotline: (021) 876 10 75
+                              <i class="fa fa-phone"></i> Hotline: {{ App\Entities\Admin\Company::find(1)->phone1 }}
                             </li>
                           </ul>
                         </div> 
@@ -126,7 +126,7 @@ author Email: db_duabelas@yahoo.com
                             <li><a href="#" target="_empty"><i class="fa top-social fa-facebook"></i></a></li>
                             <li><a href="#" target="_empty"><i class="fa top-social fa-twitter"></i></a></li>
                             <li><a href="#" target="_empty"><i class="fa top-social fa-google-plus"></i></a></li> 
-                            <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>  
+                            {{-- <li><a href="#" class="log-top" data-toggle="modal" data-target="#login-modal">Login</a></li>   --}}
                           </ul>
                         </div>
                       </div>
@@ -143,7 +143,7 @@ author Email: db_duabelas@yahoo.com
   <!--====================================================
                       LOGIN OR REGISTER
   ======================================================-->
-  <section id="login">
+  {{-- <section id="login">
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -198,7 +198,7 @@ author Email: db_duabelas@yahoo.com
             </div>
         </div>
     </div>
-  </section>
+  </section> --}}
 
   @yield('content')
 
