@@ -19,6 +19,26 @@ Route::get('/', 'Front\Home\FrontController@index')->name('front.home');
 Route::get('/home', 'Front\Home\FrontController@index')->name('front.home');
 Route::post('/comments/store-front', 'Front\Home\CommentController@storeFront')->name('comments.store-front');
 
+Route::get('/storage/files/{filename}', function ($filename)
+{
+    // Add folder path here instead of storing in the database.
+    $path = storage_path('app/public/files/' . $filename);
+
+    $path = str_replace('\\', '/', $path);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
 Route::get('/loginadmin', 'Auth\LoginController@loginadmin')->name('loginadmin');
 Route::get('/registerfronts', 'Front\Home\FrontController@registerfront')->name('registerfronts');
 Route::post('/loginfront', 'Auth\LoginController@storeloginfront')->name('storeloginfront');
