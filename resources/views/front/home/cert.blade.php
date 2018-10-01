@@ -119,7 +119,7 @@ $node->description
                           <div class="panel-body">
                             {!! Form::open(['route'=> ['certificates.show', $node->id] , 'method' => 'GET', 'files'=>true]) !!}
                               <input type="text" name="company_name" placeholder="Fill your company name" class="form-control" value="{{ $cert->company_name }}"><br>
-                              <input type="text" name="certificate_no" placeholder="Certificate nomor" class="form-control" value="{{ $cert->certificate_no }}"><br>
+                              <input type="text" name="certificate_no" placeholder="Certificate number" class="form-control" value="{{ $cert->certificate_no }}"><br>
                               <button class="btn btn-general btn-green" style="width: 100%;" type="submit">Check</button>
                             {!! Form::close() !!}
                           </div>

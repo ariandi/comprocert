@@ -112,7 +112,9 @@ author Email: db_duabelas@yahoo.com
                         <div class="col-md-9">
                           <ul class="list-inline top-contacts">
                             <li>
-                              <i class="fa fa-envelope"></i> Email: <a href="mailto:db_duabelas@yahoo.com.com">db_duabelas@yahoo.com.com</a>
+                              <i class="fa fa-envelope"></i> 
+                                Email: 
+                                <a href="mailto:{{ App\Entities\Admin\Company::find(1)->Email }}">{{ App\Entities\Admin\Company::find(1)->Email }}</a>
                             </li>
                             <li>
                               <i class="fa fa-phone"></i> Hotline: (021) 876 10 75
