@@ -13,6 +13,11 @@ Home
 @endsection
 
 @section('css')
+<style type="text/css">
+  .hero h1 {
+    width:auto;
+  }
+</style>
 @endsection
 
 @section('js')
