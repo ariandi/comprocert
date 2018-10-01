@@ -92,7 +92,7 @@ $node->description
                   <img src="{{ url(Storage::url($serList->medianode1)) }}" class="img-fluid" alt="...">
               </div>
               <h3>{{ $serList->title }}</h3>
-              <p class="desc">{!! strip_tags($serList->content2)  !!}</p>
+              <p class="desc">{!! substr(strip_tags($serList->content2), 0, 500)  !!}</p>
               <a href="{{ Url('/'.$serList->alias) }}"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
               </div>
             </div>
