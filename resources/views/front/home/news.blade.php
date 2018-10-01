@@ -92,7 +92,7 @@ $node->description
                   <img src="{{ url(Storage::url($serList->medianode1)) }}" class="img-fluid" alt="...">
               </div>
               <h3>{{ $serList->title }}</h3>
-              <p class="desc">Clamp meter connected to an AC monitors the current flow and indicates usage (range) through green, orange and red colour codes.</p>
+              <p class="desc">{!! strip_tags($serList->content2)  !!}</p>
               <a href="{{ Url('/'.$serList->alias) }}"><i class="fa fa-arrow-circle-o-right"></i> Learn More</a>
               </div>
             </div>
