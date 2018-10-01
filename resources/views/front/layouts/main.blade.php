@@ -28,6 +28,18 @@ author Email: db_duabelas@yahoo.com
   <link rel="stylesheet" href="{{ asset('theme/css/owl-carousel/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ asset('theme/css/owl-carousel/owl.theme.default.min.css') }}">
   <link rel="stylesheet" href="{{ asset('theme/css/style.css') }}">
+  <style type="text/css">
+    @media only screen and (min-width: 600px) {
+        .hero h1 {
+          width:auto;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .navbar-brand img{
+          width: 170px;
+        }
+    }
+  </style>
   @yield('css')
 
 </head>

@@ -36,10 +36,10 @@
 				    	<div class="panel panel-default">
 			                <div class="panel-body">
 			                	@if (\Session::has('success'))
-							          	<div class="alert alert-success">
-							            	<p>{{ \Session::get('success') }}</p>
-							          	</div>
-						        		@endif
+						          	<div class="alert alert-success">
+						            	{{ \Session::get('success') }}
+						          	</div>
+				        		@endif
 			                   	<a href="{{ route('persons.create') }}" class="btn btn-primary form-group savelang pull-right">Add Person</a>
 			            	</div>
 			            </div>

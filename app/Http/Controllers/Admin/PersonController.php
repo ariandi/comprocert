@@ -57,11 +57,13 @@ class PersonController extends Controller
      */
     public function store(StorePerson $request)
     {
-        User::api_storePerson($this->apiURI, $request->validated());
+        if($request->validated()){
+            User::api_storePerson($this->apiURI, $request);
 
-        return redirect()
-            ->route('persons.index')
-            ->with('success','Data person has been inserted.');
+            return redirect()
+                ->route('persons.index')
+                ->with('success','Data person has been inserted.');
+        }
     }
 
     /**

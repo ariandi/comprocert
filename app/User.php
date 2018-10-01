@@ -95,6 +95,7 @@ class User extends Authenticatable
     {
         $data = User::create([
             'name' => $user['firstName'] . ' ' . $user['lastName'],
+            'username' => $user['email'],
             'first_name' => $user['firstName'],
             'last_name' => $user['lastName'],
             'gender' => $user['gender'],
@@ -104,6 +105,7 @@ class User extends Authenticatable
             'password' => Hash::make($user['password']),
             'profile_img' => 'internett1/demojm/images/user_default_img.png',
             'lang_id' => $user['languageID'],
+            'active' => 1,
             'role' => $user['role']
         ]);
 

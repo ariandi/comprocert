@@ -13,21 +13,7 @@ Home
 @endsection
 
 @section('css')
-<style type="text/css">
-  
-  @media only screen and (min-width: 600px) {
-      .hero h1 {
-        width:auto;
-      }
-  }
 
-  @media only screen and (max-width: 600px) {
-      .navbar-brand img{
-        width: 170px;
-      }
-  }
-
-</style>
 @endsection
 
 @section('js')

@@ -17,6 +17,19 @@
 @endsection
 
 @section('content')
+@if (count($errors) > 0)
+  <section class="content" style="min-height: 100px;">
+  <div class="alert alert-danger">
+    <strong>Whoops!</strong> An error occurred while inputting.<br><br>
+    <ul>
+       @foreach ($errors->all() as $error)
+         <li>{{ $error }}</li>
+       @endforeach
+    </ul>
+  </div>
+  </section>
+@endif
+
 <section class="content">
 	<form method="post" action="{{ route('persons.store') }}">
 		{{ csrf_field() }}
@@ -69,7 +82,7 @@
 							<label for="company">Company(s)</label>
 							<select class="js-example-basic-multiple form-control" name="company[]" multiple="multiple">
 							@foreach ($companies as $company)
-								<option value="{{ $company->CompanyID }}">{{ $company->CompanyName }}</option>
+								<option value="{{ $company->id }}">{{ $company->CompanyName }}</option>
 							@endforeach
 							</select>
 							<small class="text-red">{{ $errors->first('company') }}</small>
@@ -78,7 +91,7 @@
 					<div class="col-md-6">
 						<div class="form-group">
 							<label for="lastName">Last Name </label>
-							<input type="text" name="lastName" id="lastName" value="" class="form-control" />
+							<input type="text" name="lastName" id="lastName" value="{{ old('lastName') }}" class="form-control" />
 							<small class="text-red">{{ $errors->first('lastName') }}</small>
 						</div>
 						<div class="form-group">
